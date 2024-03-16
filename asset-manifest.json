@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/gateway-react/static/js/main.47fde4fb.js",
+    "main.js": "/gateway-react/static/js/main.26045462.js",
     "index.html": "/gateway-react/index.html",
-    "main.47fde4fb.js.map": "/gateway-react/static/js/main.47fde4fb.js.map"
+    "main.26045462.js.map": "/gateway-react/static/js/main.26045462.js.map"
   },
   "entrypoints": [
-    "static/js/main.47fde4fb.js"
+    "static/js/main.26045462.js"
   ]
 }
