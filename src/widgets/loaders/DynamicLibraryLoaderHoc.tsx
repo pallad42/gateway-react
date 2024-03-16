@@ -29,8 +29,8 @@ const withDynamicLibraryLoader =
         <div>
           <Helmet onChangeClientState={handleChangeClientState}>
             <script async src={scriptUrl} type='text/javascript' />
-            <link rel='stylesheet' type='text/css' href={scriptCss} />
           </Helmet>
+          <link rel='stylesheet' type='text/css' href={scriptCss} />
           <Component {...props} scriptLoaded={scriptLoaded && scriptInitialized} />
         </div>
       </HelmetProvider>
