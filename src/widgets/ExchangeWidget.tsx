@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
-import withDynamicLibraryLoader from './loaders/DynamicLibraryLoaderHoc';
-
-// make sure to set this env variables in your .env file and provide correct URL (tst/prd)
-const scriptUrl = process.env.REACT_APP_GATEWAY_JS_URL as string;
-const scriptCss = process.env.REACT_APP_GATEWAY_CSS_URL as string;
+import gatewayLibraryLoader from './loaders/GatewayLibraryLoaderHoc';
 
 export type ExchangeWidgetProps = {
   scriptLoaded: boolean; // ignore this prop, it's injected by HOC
@@ -40,4 +36,4 @@ const ExchangeWidget = ({ scriptLoaded, widgetId, widgetLanguage }: ExchangeWidg
   );
 };
 
-export default withDynamicLibraryLoader({ scriptUrl, scriptCss })(ExchangeWidget);
+export default gatewayLibraryLoader()(ExchangeWidget);

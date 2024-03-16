@@ -2,13 +2,11 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { HelmetTags, StateUpdate } from 'react-helmet-async/lib/types';
 import { FC, useState } from 'react';
 
-export type DynamicLibraryLoadedHoc = {
-  scriptUrl: string;
-  scriptCss: string;
-};
+// make sure to set this env variables in your .env file and provide correct URL (tst/prd)
+const scriptUrl = process.env.REACT_APP_GATEWAY_JS_URL as string;
+const scriptCss = process.env.REACT_APP_GATEWAY_CSS_URL as string;
 
-const withDynamicLibraryLoader =
-  ({ scriptUrl, scriptCss }: DynamicLibraryLoadedHoc) =>
+const gatewayLibraryLoader = () =>
   (Component: FC<any>) =>
   (props: any) => {
     const [scriptLoaded, setScriptLoaded] = useState(false);
@@ -37,4 +35,4 @@ const withDynamicLibraryLoader =
     );
   };
 
-export default withDynamicLibraryLoader;
+export default gatewayLibraryLoader;
